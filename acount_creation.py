@@ -1,7 +1,7 @@
 from iban_generator import generate_iban
 
-def add_acount (name, surname, balance, user_acount): #interest ==8.2%
-  
+def add_acount (name, surname, balance, user_acount):
+    pass
     loan = int(0)
     interest = float(8.2)
     if balance>= 100:
@@ -13,4 +13,4 @@ def add_acount (name, surname, balance, user_acount): #interest ==8.2%
     return user_acount
     
 
-add_acount('otar', 'kharatishvili', 100, )
+
