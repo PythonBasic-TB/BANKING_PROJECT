@@ -7,8 +7,9 @@ from transaction_history import view_full_history, view_top_up_history, view_tra
 from transfers import transfer_money
 from validator import validate_balance, validate_iban, validate_name
 from view_acount import view_acc
+from menu import menu_actions
 def main ():
-
+    menu_actions()
 
 
 
@@ -19,5 +20,5 @@ def main ():
 
     return
 
-if __name__ == 'main':
+if __name__ == '__main__':
     main()
