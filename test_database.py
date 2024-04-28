@@ -8,5 +8,5 @@ customers = {
     'TB0007': {'name': 'Customer 7', 'surname': 'Doe', 'balance': 700, 'loan': 0, 'interest': 8.2}, 
     'TB0008': {'name': 'Customer 8', 'surname': 'Doe', 'balance': 800, 'loan': 0, 'interest': 8.2}, 
     'TB0009': {'name': 'Customer 9', 'surname': 'Doe', 'balance': 900, 'loan': 0, 'interest': 8.2}, 
-    'TB00010': {'name': 'Customer 10', 'surname': 'Doe', 'balance': 1000, 'loan': 0, 'interest': 8.2}
+    'TB0010': {'name': 'Customer 10', 'surname': 'Doe', 'balance': 1000, 'loan': 0, 'interest': 8.2}
     }
