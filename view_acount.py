@@ -1,6 +1,5 @@
-from  test_database import customers as database
 from validator import validate_iban
-def view_acc():
+def view_acc(database):
     iban = input("Enter account's IBAN: ")
     
     if not validate_iban(iban):

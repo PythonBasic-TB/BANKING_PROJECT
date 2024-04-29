@@ -1,7 +1,7 @@
-from  test_database import customers as database
+
 from validator import validate_iban, validate_input_is_float
 
-def transfer_money():
+def transfer_money(database):
     iban1 = input("Enter sender's IBAN: ")
     
     if not validate_iban(iban1):

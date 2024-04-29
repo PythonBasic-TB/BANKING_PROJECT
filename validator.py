@@ -9,10 +9,10 @@ def validate_iban(iban):
     
 
 def validate_balance ():
-    pass
+    return True
 
 def validate_name():
-    pass
+    return True
 
 def validate_input_is_float(input_data):
     try:
