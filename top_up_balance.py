@@ -1,6 +1,7 @@
 
-def top_up (database, amount, top_up_history):
+def top_up (database, top_up_history):
     iban = input ("please enter your Iban: ")
+    amount = float(input("please enter the amount you want to add to balance: "))
     for user_acount in database:
         if iban in user_acount:
             user_acount[iban]['balance'] += amount
