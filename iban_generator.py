@@ -1,7 +1,8 @@
 import random
 
-def generate_iban(user_acount):
+def generate_iban(database):
+	
 	while True:
 		iban =  "TB" + ''.join(random.choices('0123456789', k=4))
-		if iban not in user_acount:
+		if iban not in database:
 			return iban
