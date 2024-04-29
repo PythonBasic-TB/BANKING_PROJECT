@@ -11,3 +11,14 @@ customers = {
     'TB0010': {'name': 'Customer 10', 'surname': 'Doe', 'balance': 1000, 'loan': 0, 'interest': 8.2}
     }
 top_up_histories =[]
+
+
+
+# users = [
+#     {'iban':'TB0001','name': 'Customer 1', 'surname': 'Doe', 'balance': 100, 'loan': 0, 'interest': 8.2},
+#     {'iban':'TB0002','name': 'Customer 2', 'surname': 'Doe', 'balance': 100, 'loan': 0, 'interest': 8.2},
+#     {'iban':'TB0003','name': 'Customer 3', 'surname': 'Doe', 'balance': 100, 'loan': 0, 'interest': 8.2},
+#     {'iban':'TB0004','name': 'Customer 4', 'surname': 'Doe', 'balance': 100, 'loan': 0, 'interest': 8.2},
+#     {'iban':'TB0005','name': 'Customer 5', 'surname': 'Doe', 'balance': 100, 'loan': 0, 'interest': 8.2},
+# ]
+
