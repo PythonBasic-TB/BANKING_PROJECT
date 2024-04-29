@@ -10,3 +10,4 @@ customers = {
     'TB0009': {'name': 'Customer 9', 'surname': 'Doe', 'balance': 900, 'loan': 0, 'interest': 8.2}, 
     'TB0010': {'name': 'Customer 10', 'surname': 'Doe', 'balance': 1000, 'loan': 0, 'interest': 8.2}
     }
+top_up_histories =[]
