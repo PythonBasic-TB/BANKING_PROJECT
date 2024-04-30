@@ -1,1 +1,2 @@
 database = []
+transaction_history = []
