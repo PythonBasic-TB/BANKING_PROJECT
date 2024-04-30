@@ -2,7 +2,7 @@ from decorators import print_f
 from transfers import transfer_money
 from view_acount import view_acc
 from acount_creation import add_acount
-from accaunt_data import database
+from accaunt_data import account_database as database, top_up_hist, loan_hist , p2p_hist 
 from top_up_balance import top_up
 from calculate_anual_interest import cal_anual_int
 
