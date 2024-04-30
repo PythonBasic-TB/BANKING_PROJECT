@@ -8,7 +8,10 @@ def validate_iban(iban):
     return True
 
 def validate_iban_exists(iban, database):
-    return iban in database
+    for ibans in database:
+        if iban in ibans:
+            return True
+    return False
 
 def validate_balance ():
     return True
