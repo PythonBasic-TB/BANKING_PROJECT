@@ -1,5 +1,3 @@
-
-
 def add_loan(loan, accountInfo, loan_hist, iban):
     accountInfo['balance'] += loan
     accountInfo['loan'] -= loan
