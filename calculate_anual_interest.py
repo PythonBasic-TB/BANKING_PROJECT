@@ -7,7 +7,7 @@ def GetAccountInfo (iban, database):
             return ibans[iban]
 
 
-def cal_anual_int (database, interest):
+def cal_anual_int (database, loan_hist):
     iban = input("Enter sender's IBAN: ")
     if not validate_iban(iban):
         print(f"Invalid IBAN {iban}")
@@ -30,7 +30,7 @@ def cal_anual_int (database, interest):
     print(f"Your annual interest rate will be {annualRate}")
     answer = input("Proceed with loan Yes/No: ")
     if answer.capitalize == "YES":
-        add_loan(loan, accountInfo)
+        add_loan(loan, accountInfo, loan_hist, iban)
     elif answer.capitalize == "NO":
         return
     else:
