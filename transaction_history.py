@@ -4,3 +4,5 @@ def view_top_up_history ():
     pass
 def view_transfer_history():
     pass
+def view_loan_history():
+    pass
