@@ -1,6 +1,11 @@
 from validator import validate_iban, validate_input_is_float, validate_iban_exists
 from add_loan_to_balance import add_loan
-from acount_creation import interest
+
+def GetAccountInfo (iban, database):
+    for ibans in database:
+        if iban in ibans:
+            return ibans[iban]
+
 
 def cal_anual_int (database, interest):
     iban = input("Enter sender's IBAN: ")
@@ -19,11 +24,13 @@ def cal_anual_int (database, interest):
     else:
        loan = float(loan)
     
-    annualRate = loan * interest / 100
+    accountInfo = GetAccountInfo (iban, database)
+    
+    annualRate = loan * accountInfo['interest'] / 100
     print(f"Your annual interest rate will be {annualRate}")
     answer = input("Proceed with loan Yes/No: ")
     if answer.capitalize == "YES":
-        add_loan(database, iban, loan)
+        add_loan(loan, accountInfo)
     elif answer.capitalize == "NO":
         return
     else:
