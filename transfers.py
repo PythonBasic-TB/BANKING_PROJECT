@@ -1,6 +1,6 @@
-
-from validator import validate_iban, validate_input_is_float
-
+from accaunt_data import account_database as database
+from validator import validate_iban, validate_input_is_float, validate_iban_exists
+from find_customer_with_iban import find_customer_with_iban
 def transfer_money(database):
     iban1 = input("Enter sender's IBAN: ")
     
@@ -21,10 +21,10 @@ def transfer_money(database):
     else:
         amount = float(amount)
         
-    if iban1 not in database:
+    if not validate_iban_exists(iban1):
         print(f"Account {iban1} does not exist")
         
-    elif iban2 not in database:
+    elif not validate_iban_exists(iban2):
         print(f"Account {iban2} does not exist")
         
     elif database[iban1]['balance'] < amount:
