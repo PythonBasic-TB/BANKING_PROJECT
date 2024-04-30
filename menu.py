@@ -36,7 +36,7 @@ def menu_actions():
         elif menu_item == "5":
             pass
         elif menu_item == "6":
-            cal_anual_int(database)
+            cal_anual_int(database, loan_hist)
         # აქ შეგვიძლია ვამატოთ სხვა ფუნქციების გამოძახება
         elif menu_item == "x":
             break
