@@ -4,6 +4,7 @@ from view_acount import view_acc
 from acount_creation import add_acount
 from accaunt_data import database
 from top_up_balance import top_up
+from calculate_anual_interest import cal_anual_int
 
 #menu items # აქ შეგიძლიათ დაამატოთ პუნქტი, თავისი მნიშვნელობით, იგივე პუნქტს გამოვიყენებთ და განვსაზღვრავთ menu_actions-შიც
 MENU_LIST = {
@@ -35,7 +36,7 @@ def menu_actions():
         elif menu_item == "5":
             pass
         elif menu_item == "6":
-            pass
+            cal_anual_int(database)
         # აქ შეგვიძლია ვამატოთ სხვა ფუნქციების გამოძახება
         elif menu_item == "x":
             break
