@@ -28,7 +28,7 @@ def menu_actions():
             # ოთო აქ ოთხი პარამეტრი უნდა გააგზავნო, 
             #არ ჯობია უბრალოდ add_acount() და მერე შიგნით მოითხოვოს ინფორმაცია?
         elif menu_item == "2":
-            top_up()
+            top_up(database, top_up_hist)
         elif menu_item == "3":
             transfer_money(database)
         elif menu_item == "4":
