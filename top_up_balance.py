@@ -22,7 +22,7 @@ def top_up (account_database, top_up_hist):
                     
                 return
      
-    print ('Account was not found')
+    
 
 
 
