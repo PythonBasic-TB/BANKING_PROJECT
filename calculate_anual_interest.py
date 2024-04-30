@@ -27,11 +27,11 @@ def cal_anual_int (database, loan_hist):
     accountInfo = GetAccountInfo (iban, database)
     
     annualRate = loan * accountInfo['interest'] / 100
-    print(f"Your annual interest rate will be {annualRate}")
+    print(f"Your annual interest rate will be {annualRate} GEL")
     answer = input("Proceed with loan Yes/No: ")
-    if answer.capitalize == "YES":
+    if answer.upper() == "YES":
         add_loan(loan, accountInfo, loan_hist, iban)
-    elif answer.capitalize == "NO":
+    elif answer.upper() == "NO":
         return
     else:
         print("Invalid answer")

@@ -5,4 +5,4 @@ def add_loan(loan, accountInfo, loan_hist, iban):
     accountInfo['loan'] -= loan
     historyElement = {'iban' : iban, 'loan' : loan}
     loan_hist.append(historyElement)
-    print (f"The loan has been issued successfully. Your balance was filled with {loan} GEL")
+    print (f"The loan has been issued successfully. Your balance was filled with {loan} GEL, your balance is: {accountInfo['balance']}")
