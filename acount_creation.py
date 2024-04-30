@@ -1,5 +1,6 @@
 from iban_generator import generate_iban
 from test_database import customers
+from validator import validate_input_is_float
 
 def add_acount (customers):
     user_acount ={}
@@ -7,7 +8,13 @@ def add_acount (customers):
     surname = input("Please enter your surname: ")
     balance = int(input("Please enter your balance, at least 100GEL: "))
     loan = int(0)
-    interest = float(8.2)
+    interest = input("Please enter the interest: ")
+    if not validate_input_is_float(interest):
+        print("Interest must be a number")
+        return
+    else:
+        interest = float(interest)
+
     if balance>= 100:
         iban = generate_iban(customers)
         user_acount[iban] = {"name": name, "surname":surname, "balance": balance, "loan": loan,"interest": interest}

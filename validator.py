@@ -6,7 +6,9 @@ def validate_iban(iban):
     if not iban[2:].isdigit():
         return False
     return True
-    
+
+def validate_iban_exists(iban, database):
+    return iban in database
 
 def validate_balance ():
     return True
