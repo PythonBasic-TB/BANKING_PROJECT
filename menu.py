@@ -5,6 +5,8 @@ from acount_creation import add_acount
 from accaunt_data import account_database as database, top_up_hist, loan_hist , p2p_hist 
 from top_up_balance import top_up
 from calculate_anual_interest import cal_anual_int
+from transaction_history import view_top_up_history, view_loan_history, view_transfer_history
+from full_hist import hist
 
 #menu items # აქ შეგიძლიათ დაამატოთ პუნქტი, თავისი მნიშვნელობით, იგივე პუნქტს გამოვიყენებთ და განვსაზღვრავთ menu_actions-შიც
 MENU_LIST = {
@@ -12,8 +14,11 @@ MENU_LIST = {
     "2": "Top up balance",
     "3": "Transfer money",
     "4": "View account details",
-    "5": "View account history",
-    "6": "Calculate annual interest",
+    "5": "View Top up history",
+    "6": "View Transfer history",
+    "7": "View Loan history",
+    "8": "view Full history",
+    "9": "Calculate annual interest",
     "x": "Exit"
 }
 def menu_actions():
@@ -34,8 +39,15 @@ def menu_actions():
         elif menu_item == "4":
             view_acc(database)
         elif menu_item == "5":
-            pass
+            view_top_up_history (top_up_hist) 
         elif menu_item == "6":
+            view_transfer_history (p2p_hist)   
+        elif menu_item == "7":
+            view_loan_history (loan_hist)
+        elif menu_item == "8":
+            hist(top_up_hist, p2p_hist, loan_hist)
+              
+        elif menu_item == "9":
             cal_anual_int(database, loan_hist)
         # აქ შეგვიძლია ვამატოთ სხვა ფუნქციების გამოძახება
         elif menu_item == "x":
