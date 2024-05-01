@@ -20,21 +20,25 @@ def transfer_money(database):
         return
     else:
         amount = float(amount)
-        
-    if not validate_iban_exists(iban1):
+    sender = find_customer_with_iban(iban1)
+    receiver = find_customer_with_iban(iban2)    
+    if not sender:
         print(f"Account {iban1} does not exist")
         
-    elif not validate_iban_exists(iban2):
+    elif not receiver:
         print(f"Account {iban2} does not exist")
         
-    elif database[iban1]['balance'] < amount:
+    elif sender['balance'] < amount:
         print(f"Insufficient balance on account {iban1}")
         
     else:
-        print(f"\nThe balance on account {iban1} is {database[iban1]['balance']} GEL")
-        print(f"The balance on account {iban2} is {database[iban2]['balance']} GEL")
-        database[iban1]['balance'] -= amount
-        database[iban2]['balance'] += amount
+        print(f"\nThe balance on account {iban1} is {sender['balance']} GEL")
+        print(f"The balance on account {iban2} is {receiver['balance']} GEL")
+        sender['balance'] -= amount
+        receiver['balance'] += amount
         print(f"\nTransfer of {amount} GEL from {iban1} t0 {iban2} was successful")
-        print(f"\nThe balance on account {iban1} is {database[iban1]['balance']} GEL")
-        print(f"The balance on account {iban2} is {database[iban2]['balance']} GEL")
+        print(f"\nThe balance on account {iban1} is {sender['balance']} GEL")
+        print(f"The balance on account {iban2} is {receiver['balance']} GEL")
+
+
+# transfer_money(database)
