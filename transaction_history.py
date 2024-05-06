@@ -1,7 +1,7 @@
-from accaunt_data import top_up_hist
-from accaunt_data import loan_hist
-from accaunt_data import p2p_hist
-
+#from accaunt_data import top_up_hist
+#from accaunt_data import loan_hist
+#from accaunt_data import p2p_hist
+from accaunt_data import t_h
 #account_database = [
    # {'TB0001': {'name': 'Customer 1', 'surname': 'Doe', 'balance': 100, 'loan': 0, 'interest': 8.2}}, 
     #{'TB0002': {'name': 'Customer 2', 'surname': 'Doe', 'balance': 200, 'loan': 0, 'interest': 8.2}}, 
@@ -9,26 +9,13 @@ from accaunt_data import p2p_hist
    # ]
 
 
-def view_top_up_history (top_up_hist):
-    iban= input ("Please enter you IBAN: ")
-    for ibans in top_up_hist:
+def view_history (t_h):
+    iban = input ("Please enter you IBAN: ")
+    type = input ("please enter what type of transaction you want to find (top_up, transactions, or loan :  )").lower()
+    for ibans in t_h:
             if iban  in ibans:
                 for k, v in ibans.items():
-                    if k== iban:
+                    if k== iban and type in str(v):
                         print (f"{k}:{v}")
 
-def view_transfer_history(p2p_hist):
-    iban= input ("Please enter you IBAN: ")
-    for ibans in p2p_hist:
-            if iban  in ibans:
-                for k, v in ibans.items():
-                    if k== iban:
-                        print (f"{k}:{v}")
-def view_loan_history(loan_hist):
-    iban= input ("Please enter you IBAN: ")
-    for ibans in loan_hist:
-            if iban  in ibans:
-                for k, v in ibans.items():
-                    if k== iban:
-                        print (f"{k}:{v}")
-                        
+
